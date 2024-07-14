@@ -21,7 +21,16 @@ let package = Package(
                 .product(name: "Vapor", package: "vapor"),
                 .product(name: "SwiftJWT", package: "Swift-JWT"),
             ],
-            path: "Sources/NightscoutNotifier"
+            path: "Sources/NightscoutNotifier",
+            cSettings: [
+                .headerSearchPath("usr/include"),
+                .define("OPENSSL", to: "1")
+            ]
+        ),
+        .target(
+            name: "OpenSSL",
+            path: "Sources/OpenSSL",
+            publicHeadersPath: "include"
         ),
         .testTarget(
             name: "NightscoutNotifierTests",
