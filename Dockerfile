@@ -4,7 +4,9 @@ FROM swift:5.7
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     openssl \
-    libssl-dev
+    libssl-dev \
+    pkg-config \
+    zlib1g-dev
 
 # Create a directory for the app
 WORKDIR /app
