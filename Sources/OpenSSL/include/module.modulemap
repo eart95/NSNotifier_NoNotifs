@@ -1,0 +1,23 @@
+//
+//  module.map.modulemap
+//  
+//
+//  Created by Enrico Artuso on 14/07/2024.
+//
+
+module OpenSSL [system] {
+    header "/usr/include/openssl/opensslv.h"
+    header "/usr/include/openssl/crypto.h"
+    header "/usr/include/openssl/x509.h"
+    header "/usr/include/openssl/x509_vfy.h"
+    header "/usr/include/openssl/pem.h"
+    header "/usr/include/openssl/bio.h"
+    header "/usr/include/openssl/evp.h"
+    header "/usr/include/openssl/err.h"
+    header "/usr/include/openssl/rsa.h"
+    header "/usr/include/openssl/pkcs7.h"
+    header "/usr/include/openssl/asn1.h"
+    header "/usr/include/openssl/ocsp.h"
+    header "/usr/include/openssl/ssl.h"
+    export *
+}
